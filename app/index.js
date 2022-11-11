@@ -1,2 +1,2 @@
-import thatsme from 'images/thatsme.png';
+import thatsme from 'thatsme.png';
 console.log(thatsme);
