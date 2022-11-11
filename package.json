@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --config webpack.config.build.js",
-    "development": "webpack serve --progress --config webpack.config.development.js",
+    "build_backend": "node app.js",
+    "build_frontend": "webpack --progress --config webpack.config.build.js",
+    "development_backend": "nodemon app.js",
+    "development_frontend": "webpack serve --progress --config webpack.config.development.js",
     "start": "npm run development"
   },
   "repository": {
@@ -45,5 +47,9 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
