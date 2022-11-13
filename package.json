@@ -8,7 +8,7 @@
     "build_frontend": "webpack --progress --config webpack.config.build.js",
     "development_backend": "nodemon app.js",
     "development_frontend": "webpack serve --progress --config webpack.config.development.js",
-    "start": "npm run development"
+    "start": "concurrently --kill-others \"npm run development_backend\" \"npm run development_frontend\""
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "concurrently": "^7.5.0",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
   }
